@@ -1,0 +1,52 @@
+﻿@page "/"
+@namespace RealTimeMonitor_Effeciency.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTimeMonitor_Effeciency</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/css/bootstrap5_2/css/bootstrap.min.css" />
+
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="RealTimeMonitor_Effeciency.styles.css" rel="stylesheet" />
+</head>
+<body class="h-100 text-bg-dark">
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js" autostart="false"></script>
+    <script>
+        window.onload = function(event) { setLayout(); }
+        Blazor.start({
+            configureSignalR: function(builder) {
+                builder.configureLogging("none");
+
+            }
+        });
+        Blazor.defaultReconnectionHandler._reconnectCallback = function(d) {
+            document.location.reload();
+        }
+    </script>
+    <script src="~/jquery/jquery-3.5.1.js"></script>
+    <script src="~/d3V7/d3.js"></script>
+    <script  src="~/script.js"></script>
+
+</body>
+</html>

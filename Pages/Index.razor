@@ -1,0 +1,25 @@
+﻿@page "/"
+<div class="test_component rounded-3 border"></div>
+@code{
+    public IJSObjectReference module;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("setLayout");
+            await setScript();
+            await module.InvokeVoidAsync("setchart");
+        }
+    }
+    async Task setScript()
+    {
+        try
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./LossTimeChart.js");
+        }
+        catch(Exception e)
+        {
+            
+        }
+    }
+}

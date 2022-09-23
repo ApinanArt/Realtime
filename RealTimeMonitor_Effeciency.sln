@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeMonitor_Effeciency", "RealTimeMonitor_Effeciency.csproj", "{4E365CF7-D421-4D6A-BE86-6BC9DDD5E25B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E365CF7-D421-4D6A-BE86-6BC9DDD5E25B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E365CF7-D421-4D6A-BE86-6BC9DDD5E25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E365CF7-D421-4D6A-BE86-6BC9DDD5E25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E365CF7-D421-4D6A-BE86-6BC9DDD5E25B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83B33B50-5ADE-4FE9-8533-207A0DA9FCB5}
+	EndGlobalSection
+EndGlobal
